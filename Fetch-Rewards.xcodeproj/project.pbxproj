@@ -8,14 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		CE8C321D2564E30F008C03E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C321C2564E30F008C03E6 /* AppDelegate.swift */; };
-		CE8C321F2564E30F008C03E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C321E2564E30F008C03E6 /* SceneDelegate.swift */; };
-		CE8C32212564E30F008C03E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C32202564E30F008C03E6 /* ViewController.swift */; };
+		CE8C32212564E30F008C03E6 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C32202564E30F008C03E6 /* RewardsViewController.swift */; };
 		CE8C32242564E30F008C03E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8C32222564E30F008C03E6 /* Main.storyboard */; };
-		CE8C32272564E30F008C03E6 /* Fetch_Rewards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE8C32252564E30F008C03E6 /* Fetch_Rewards.xcdatamodeld */; };
 		CE8C32292564E310008C03E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8C32282564E310008C03E6 /* Assets.xcassets */; };
 		CE8C322C2564E310008C03E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8C322A2564E310008C03E6 /* LaunchScreen.storyboard */; };
 		CE8C32372564E310008C03E6 /* Fetch_RewardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C32362564E310008C03E6 /* Fetch_RewardsTests.swift */; };
 		CE8C32422564E311008C03E6 /* Fetch_RewardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C32412564E311008C03E6 /* Fetch_RewardsUITests.swift */; };
+		CE8C325B2564E987008C03E6 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C325A2564E987008C03E6 /* Identifier.swift */; };
+		CE8C32632564EB27008C03E6 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C32622564EB27008C03E6 /* Identifiers.swift */; };
+		CE8C32682564EF56008C03E6 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C32672564EF56008C03E6 /* ItemTableViewCell.swift */; };
+		CE8C326D2564F222008C03E6 /* RewardsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C326C2564F222008C03E6 /* RewardsPresentation.swift */; };
+		CE8C32762564F673008C03E6 /* RewardsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C32752564F673008C03E6 /* RewardsDataSource.swift */; };
+		CE8C327E2564F6BE008C03E6 /* RewardsNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C327D2564F6BE008C03E6 /* RewardsNetworking.swift */; };
+		CE8C32842564F84B008C03E6 /* FetchRewards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C32832564F84B008C03E6 /* FetchRewards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +43,8 @@
 /* Begin PBXFileReference section */
 		CE8C32192564E30F008C03E6 /* Fetch-Rewards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch-Rewards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8C321C2564E30F008C03E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE8C321E2564E30F008C03E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE8C32202564E30F008C03E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE8C32202564E30F008C03E6 /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		CE8C32232564E30F008C03E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE8C32262564E30F008C03E6 /* Fetch_Rewards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fetch_Rewards.xcdatamodel; sourceTree = "<group>"; };
 		CE8C32282564E310008C03E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8C322B2564E310008C03E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8C322D2564E310008C03E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +54,13 @@
 		CE8C323D2564E311008C03E6 /* Fetch-RewardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch-RewardsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8C32412564E311008C03E6 /* Fetch_RewardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_RewardsUITests.swift; sourceTree = "<group>"; };
 		CE8C32432564E311008C03E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8C325A2564E987008C03E6 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		CE8C32622564EB27008C03E6 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		CE8C32672564EF56008C03E6 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		CE8C326C2564F222008C03E6 /* RewardsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsPresentation.swift; sourceTree = "<group>"; };
+		CE8C32752564F673008C03E6 /* RewardsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsDataSource.swift; sourceTree = "<group>"; };
+		CE8C327D2564F6BE008C03E6 /* RewardsNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsNetworking.swift; sourceTree = "<group>"; };
+		CE8C32832564F84B008C03E6 /* FetchRewards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRewards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +111,18 @@
 		CE8C321B2564E30F008C03E6 /* Fetch-Rewards */ = {
 			isa = PBXGroup;
 			children = (
+				CE8C32822564F833008C03E6 /* DataModels */,
+				CE8C32742564F663008C03E6 /* DataSource */,
+				CE8C32592564E971008C03E6 /* Utilities */,
+				CE8C32552564E5F7008C03E6 /* Presentation */,
+				CE8C32542564E5F1008C03E6 /* Views */,
+				CE8C32532564E5E7008C03E6 /* ViewControllers */,
+				CE8C32522564E5E0008C03E6 /* Networking */,
 				CE8C321C2564E30F008C03E6 /* AppDelegate.swift */,
-				CE8C321E2564E30F008C03E6 /* SceneDelegate.swift */,
-				CE8C32202564E30F008C03E6 /* ViewController.swift */,
 				CE8C32222564E30F008C03E6 /* Main.storyboard */,
 				CE8C32282564E310008C03E6 /* Assets.xcassets */,
 				CE8C322A2564E310008C03E6 /* LaunchScreen.storyboard */,
 				CE8C322D2564E310008C03E6 /* Info.plist */,
-				CE8C32252564E30F008C03E6 /* Fetch_Rewards.xcdatamodeld */,
 			);
 			path = "Fetch-Rewards";
 			sourceTree = "<group>";
@@ -129,6 +143,63 @@
 				CE8C32432564E311008C03E6 /* Info.plist */,
 			);
 			path = "Fetch-RewardsUITests";
+			sourceTree = "<group>";
+		};
+		CE8C32522564E5E0008C03E6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C327D2564F6BE008C03E6 /* RewardsNetworking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CE8C32532564E5E7008C03E6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C32202564E30F008C03E6 /* RewardsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE8C32542564E5F1008C03E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C32672564EF56008C03E6 /* ItemTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE8C32552564E5F7008C03E6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C326C2564F222008C03E6 /* RewardsPresentation.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CE8C32592564E971008C03E6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C325A2564E987008C03E6 /* Identifier.swift */,
+				CE8C32622564EB27008C03E6 /* Identifiers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CE8C32742564F663008C03E6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C32752564F673008C03E6 /* RewardsDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		CE8C32822564F833008C03E6 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C32832564F84B008C03E6 /* FetchRewards.swift */,
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +332,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8C32212564E30F008C03E6 /* ViewController.swift in Sources */,
+				CE8C327E2564F6BE008C03E6 /* RewardsNetworking.swift in Sources */,
+				CE8C326D2564F222008C03E6 /* RewardsPresentation.swift in Sources */,
+				CE8C32212564E30F008C03E6 /* RewardsViewController.swift in Sources */,
+				CE8C325B2564E987008C03E6 /* Identifier.swift in Sources */,
 				CE8C321D2564E30F008C03E6 /* AppDelegate.swift in Sources */,
-				CE8C321F2564E30F008C03E6 /* SceneDelegate.swift in Sources */,
-				CE8C32272564E30F008C03E6 /* Fetch_Rewards.xcdatamodeld in Sources */,
+				CE8C32762564F673008C03E6 /* RewardsDataSource.swift in Sources */,
+				CE8C32842564F84B008C03E6 /* FetchRewards.swift in Sources */,
+				CE8C32632564EB27008C03E6 /* Identifiers.swift in Sources */,
+				CE8C32682564EF56008C03E6 /* ItemTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,19 +673,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CE8C32252564E30F008C03E6 /* Fetch_Rewards.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CE8C32262564E30F008C03E6 /* Fetch_Rewards.xcdatamodel */,
-			);
-			currentVersion = CE8C32262564E30F008C03E6 /* Fetch_Rewards.xcdatamodel */;
-			path = Fetch_Rewards.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CE8C32112564E30F008C03E6 /* Project object */;
 }
