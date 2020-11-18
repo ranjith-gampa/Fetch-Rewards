@@ -5,6 +5,7 @@
 //  Created by Ranjith Gampa on 11/17/20.
 //
 
+import Combine
 import Foundation
 
 class RewardsDataSource {
@@ -13,6 +14,8 @@ class RewardsDataSource {
     @Published
     var state: State = .ready
     
+    private var task: AnyCancellable?
+
     enum State {
         case ready
         case loading
@@ -25,6 +28,17 @@ class RewardsDataSource {
     }
     
     func loadItems() {
-        networking.loadItems()
+        self.state = .loading
+        task = networking.loadItems()
+            .subscribe(on: DispatchQueue.main)
+            .map { $0 }
+            .sink(receiveCompletion: { [weak self] result in
+                switch result {
+                case .failure: self?.state = .error
+                case .finished: break
+                }
+            }, receiveValue: { [weak self] rewards in
+                self?.state = .loaded(rewards)
+            })
     }
 }

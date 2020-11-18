@@ -13,6 +13,10 @@ struct FetchRewards {
     struct Reward {
         var itemId: Item.ID
         var groupId: ItemGroup.ID
-        var name: String
+        var name: String?
+    }
+
+    init(rewards: [Reward]) {
+        self.rewards = rewards
     }
 }

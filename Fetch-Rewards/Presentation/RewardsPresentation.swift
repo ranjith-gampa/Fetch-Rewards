@@ -28,14 +28,16 @@ extension RewardsViewController.Model {
     func getGroups(from rewards: FetchRewards) -> [ViewItemGroup] {
         var groupsDict = [ItemGroup.ID: ViewItemGroup]()
         rewards.rewards.forEach { reward in
-            if let group = groupsDict[reward.groupId] {
-                var items = group.items
-                items.append(.init(from: reward))
-                groupsDict[reward.groupId] = .init(id: reward.groupId, items: items)
-            } else {
-                var items = [ViewItemGroup.ViewItem]()
-                items.append(.init(from: reward))
-                groupsDict[reward.groupId] = .init(id: reward.groupId, items: items)
+            if let name = reward.name, !name.isEmpty {
+                if let group = groupsDict[reward.groupId] {
+                    var items = group.items
+                    items.append(.init(id: reward.itemId, name: name))
+                    groupsDict[reward.groupId] = .init(id: reward.groupId, items: items)
+                } else {
+                    var items = [ViewItemGroup.ViewItem]()
+                    items.append(.init(id: reward.itemId, name: name))
+                    groupsDict[reward.groupId] = .init(id: reward.groupId, items: items)
+                }
             }
         }
         
@@ -50,9 +52,11 @@ extension RewardsViewController.Model {
 }
 
 extension RewardsViewController.Model.ViewItemGroup.ViewItem {
-    init(from reward: FetchRewards.Reward) {
+    init?(from reward: FetchRewards.Reward) {
+        guard let name = reward.name else { return nil }
+
         self.id = reward.itemId
-        self.name = reward.name
+        self.name = name
     }
 }
 
